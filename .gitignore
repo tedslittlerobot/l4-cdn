@@ -1,4 +1,38 @@
-/vendor
+# OS
+.DS_Store
+Thumbs.db
+
+# Composer
 composer.phar
 composer.lock
-.DS_Store
+/vendor
+
+# Sass
+.sass-cache
+node_modules
+
+# Node
+/node_modules
+/npm-debug.log
+
+# Laravel
+/bootstrap/compiled.php
+/app/config/local
+
+# Hide generated files
+/public/_*
+/public/var/*
+/public/packages/*
+
+# Testing
+/report
+
+# Bower
+/public/components
+
+/build/tmp/
+
+/app/js/vendor/
+/public/js/vendor/
+
+/app/storage/export/

@@ -1,15 +1,8 @@
-<?php namespace Tlr\L4Cdn;
+<?php namespace Tlr\Cdn;
 
 use Illuminate\Support\ServiceProvider;
 
-class L4CdnServiceProvider extends ServiceProvider {
-
-	/**
-	 * Indicates if loading of the provider is deferred.
-	 *
-	 * @var bool
-	 */
-	protected $defer = false;
+class CdnServiceProvider extends ServiceProvider {
 
 	/**
 	 * Bootstrap the application events.
@@ -41,4 +34,14 @@ class L4CdnServiceProvider extends ServiceProvider {
 		return array();
 	}
 
+	/**
+	 * Override method for more shallow file structure
+	 * @inheritdoc
+	 */
+	public function guessPackagePath()
+	{
+		$path = with(new \ReflectionClass($this))->getFileName();
+
+		return realpath(dirname($path).'/../resources/');
+	}
 }

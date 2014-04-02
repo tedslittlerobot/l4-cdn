@@ -12,11 +12,8 @@
         "illuminate/support": "4.1.*"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
-        "psr-0": {
-            "Tlr\\L4Cdn\\": "src/"
+        "psr-4": {
+            "Tlr\\Cdn\\": "src/"
         }
     },
     "minimum-stability": "stable"
